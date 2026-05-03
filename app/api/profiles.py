@@ -23,9 +23,7 @@ logger = logging.getLogger(__name__)
 profiles_bp = Blueprint("profiles", __name__)
 
 
-# ------------------------------------------------------------------ #
 # POST /api/v1/profiles — Register a business profile
-# ------------------------------------------------------------------ #
 
 @profiles_bp.route("/profiles", methods=["POST"])
 def create_profile():
@@ -98,9 +96,7 @@ def create_profile():
     ), 201
 
 
-# ------------------------------------------------------------------ #
 # GET /api/v1/profiles/<profile_uuid> — Get profile + stats
-# ------------------------------------------------------------------ #
 
 @profiles_bp.route("/profiles/<profile_uuid>", methods=["GET"])
 def get_profile(profile_uuid: str):
@@ -136,9 +132,7 @@ def get_profile(profile_uuid: str):
     ), 200
 
 
-# ------------------------------------------------------------------ #
 # POST /api/v1/profiles/<profile_uuid>/run — Trigger pipeline
-# ------------------------------------------------------------------ #
 
 @profiles_bp.route("/profiles/<profile_uuid>/run", methods=["POST"])
 def run_pipeline(profile_uuid: str):
@@ -173,9 +167,7 @@ def run_pipeline(profile_uuid: str):
     return jsonify(result), status_code
 
 
-# ------------------------------------------------------------------ #
 # GET /api/v1/profiles/<profile_uuid>/queries — List queries
-# ------------------------------------------------------------------ #
 
 @profiles_bp.route("/profiles/<profile_uuid>/queries", methods=["GET"])
 def get_queries(profile_uuid: str):
@@ -236,9 +228,7 @@ def get_queries(profile_uuid: str):
     ), 200
 
 
-# ------------------------------------------------------------------ #
 # GET /api/v1/profiles/<profile_uuid>/recommendations
-# ------------------------------------------------------------------ #
 
 @profiles_bp.route("/profiles/<profile_uuid>/recommendations", methods=["GET"])
 def get_recommendations(profile_uuid: str):

@@ -19,9 +19,7 @@ logger = logging.getLogger(__name__)
 queries_bp = Blueprint("queries", __name__)
 
 
-# ------------------------------------------------------------------ #
 # POST /api/v1/queries/<query_uuid>/recheck
-# ------------------------------------------------------------------ #
 
 @queries_bp.route("/queries/<query_uuid>/recheck", methods=["POST"])
 def recheck_query(query_uuid: str):
