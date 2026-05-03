@@ -7,14 +7,6 @@ Provides shared infrastructure for all AI agents:
   - Retry logic on malformed LLM responses
   - Token tracking
   - Structured logging
-
-Design decision: GPT-4o is used across all three agents because:
-  1. Its JSON mode and function-calling capabilities ensure very reliable
-     structured output, which is the #1 requirement here.
-  2. It handles long system prompts with complex schemas better than
-     smaller models.
-  3. Temperature=0 gives deterministic, parseable outputs — critical for
-     a pipeline that must NOT crash on malformed JSON.
 """
 
 import json

@@ -30,9 +30,7 @@ from .base import BaseAgent, AgentError
 logger = logging.getLogger(__name__)
 
 
-# ------------------------------------------------------------------ #
 # System prompt — defines strict JSON output contract
-# ------------------------------------------------------------------ #
 
 SYSTEM_PROMPT = """You are a senior content strategist specialising in AI visibility
 and search intent optimisation. You help businesses appear in AI-generated answers

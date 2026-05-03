@@ -31,9 +31,7 @@ from app.utils.dataforseo import DataForSEOClient, DataForSEOError
 logger = logging.getLogger(__name__)
 
 
-# ------------------------------------------------------------------ #
 # System prompt for visibility check
-# ------------------------------------------------------------------ #
 
 VISIBILITY_SYSTEM_PROMPT = """You are an AI search analyst who simulates how AI assistants
 (ChatGPT, Perplexity, Claude) respond to search queries.

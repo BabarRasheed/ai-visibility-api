@@ -25,9 +25,7 @@ from .base import BaseAgent, AgentError
 logger = logging.getLogger(__name__)
 
 
-# ------------------------------------------------------------------ #
 # System prompt — defines agent persona and strict output contract
-# ------------------------------------------------------------------ #
 
 SYSTEM_PROMPT = """You are a senior SEO and AI visibility strategist with 10+ years of
 experience researching how businesses appear in AI-generated answers.
